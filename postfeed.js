@@ -4,20 +4,26 @@
 	function define_Postfeed()
 	{
 		var Postfeed={};
-		var url="http://staff.tumblr.com/rss";
+		Postfeed.option={
+			url:"http://staff.tumblr.com/rss",
+			target:"body"
+		};
 		Postfeed.fetchPost=function()
 		{
 			
 		}
+
+		return Postfeed;
 	
-		if(typeof(Postfeed) === 'undefined')
+	}
+
+	if(typeof(Postfeed) === 'undefined')
 		{
     	    window.Postfeed = define_Postfeed();
     	}
     else{
         console.log("Postfeed already defined.");
     }
-	}
 	
 	
 })(window);
