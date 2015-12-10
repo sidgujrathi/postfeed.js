@@ -6,11 +6,13 @@
 		var Postfeed={};
 		Postfeed.option={
 			url:"http://staff.tumblr.com/rss",
-			target:"body"
+			target:"body",
+			headline:"h2",
+			post_count:3
 		};
 		Postfeed.fetchPost=function()
 		{
-			
+			alert("Configurations are "+JSON.stringify(Postfeed));
 		}
 
 		return Postfeed;
