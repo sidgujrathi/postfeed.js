@@ -1,29 +1,27 @@
 (function(window)
 {
 	'use strict';
-	function define_Postfeed()
-	{
+	function define_Postfeed() {
 		var Postfeed={};
-		Postfeed.option={
+		
+		Postfeed.options={
 			url:"http://staff.tumblr.com/rss",
 			target:"body",
 			headline:"h2",
 			post_count:3
 		};
-		Postfeed.fetchPost=function()
-		{
-			alert("Configurations are "+JSON.stringify(Postfeed));
+		
+		Postfeed.fetchPost=function() {
+			console.log("Configurations are "+JSON.stringify(Postfeed));
 		}
 
-		return Postfeed;
-	
+		return Postfeed;	
 	}
 
-	if(typeof(Postfeed) === 'undefined')
-		{
+	if(typeof(Postfeed) === 'undefined') {
     	    window.Postfeed = define_Postfeed();
-    	}
-    else{
+    }
+    else {
         console.log("Postfeed already defined.");
     }
 	
